@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y \
   python3-pip \
   git
 
-RUN pip3 install pyyaml
+FROM python
+RUN pip install pyyaml
 
 COPY feed.py /usr/bin/feed.py
 
